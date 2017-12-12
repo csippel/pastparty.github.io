@@ -1,0 +1,24 @@
+{
+  "name": "pastparty",
+  "version": "1.0.0",
+  "description": "Homepage",
+  "main": "index.js",
+  "author": "Pastparty",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^7.2.2",
+    "browser-sync": "^2.18.13",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-cache": "^1.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}

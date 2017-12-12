@@ -1,0 +1,12 @@
+/// vars, breakpoints
+@import './base/settings';
+/// basic stylings, container
+@import './base/base';
+
+/// components
+@import './components/header';
+@import './components/footer';
+// @import './components/orbs';
+
+/// buttons, form elements
+@import './components/ui';
