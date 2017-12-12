@@ -27,7 +27,7 @@ const del          = require('del');
 
 
 gulp.task('styles', () =>
-    gulp.src('./src/sass/**/*.scss')
+    gulp.src('./_src/sass/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([
@@ -41,29 +41,29 @@ gulp.task('styles', () =>
                 }
             })
         ]))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./public/css'))
+        .pipe(sourcemaps.write('./dev'))
+        .pipe(gulp.dest('./css'))
 );
 
 gulp.task('serve', ['styles'], () => {
     browsersync.init({
-        server: "./public"
+        server: "./"
     });
 
-    gulp.watch('./src/sass/**/*.scss', ['styles']);
-    gulp.watch('./public/*.html').on('change', reload);
+    gulp.watch('./_src/sass/**/*.scss', ['styles']);
+    gulp.watch('./*.html').on('change', reload);
 });
 
 
 // gulp.task('scripts', () =>
-//     gulp.src('./src/js/**/*.js')
+//     gulp.src('./_src/js/**/*.js')
 //         .pipe(sourcemaps.init())
 //         .pipe(babel())
 //         .pipe(eslint())
 //         .pipe(concat())
 //         .pipe(uglify())
 //         .pipe(sourcemaps.write())
-//         .pipe(gulp.dest('./public/js'))
+//         .pipe(gulp.dest('./js'))
 // );
 
 gulp.task('default', ['styles']);
