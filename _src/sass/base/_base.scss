@@ -1,0 +1,17 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    background: $color-text;
+    font-family: -apple-system, BlinkMacSystemFont,
+                "Avenir Next", Avenir,
+                "Segoe UI", Roboto,
+                "Helvetica Neue", Oxygen-Sans,
+                Cantarell, Ubuntu,
+                "Franklin Gothic Medium",
+                "Liberation Sans",
+                sans-serif;
+    font-size: $m-size;
+}
