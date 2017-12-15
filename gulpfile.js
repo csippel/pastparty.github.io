@@ -95,8 +95,36 @@ gulp.task('scripts', () =>
                 'max-len': 1,
                 // constructor names should start capitalized
                 'new-cap': 1,
-
-
+                // no usge of both space and tabs for indentation
+                'no-mixed-spaces-and-tabs': 1,
+                // white space character at the end of a line without any meaning
+                'no-trailing-spaces': 1,
+                // when ternary operator offers a simpler alterntive
+                'no-unneeded-ternary': 1,
+                // explain your code in case of doubt
+                'require-jsdoc': 1,
+                // to improve readability add a whitespace after comment character
+                'spaced-comment': 1,
+                // one space before and after arrow function arrows
+                'arrow-spacing': 1,
+                // class constructions which extend from classes need super()
+                'constructor-super': 2,
+                // ... also check for usage of this before any super()
+                'no-this-before-super': 2,
+                // error for reassingation of a var which was declared with const
+                'no-const-assign': 2,
+                // class members with duplicate names should be avoided
+                'no-dupe-class-members': 2,
+                // no need for constructor functions? omit them
+                'no-useless-constructor': 1,
+                // better use let or const for block instead of function scoping
+                'no-var': 1,
+                // ... and also check for never reassigned let variables
+                'prefer-const': 1,
+                // better use template literals instead of string concat
+                'prefer-template': 1,
+                // and also check for some useless string concat
+                'no-useless-concat': 1
             }
         }))
         .pipe(eslint.format())

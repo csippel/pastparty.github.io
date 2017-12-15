@@ -57,3 +57,16 @@ if (foo) {
 }else {
     //...
 }
+
+//This is a comment with no whitespace at the beginning
+
+/*This is a comment with no whitespace at the beginning */
+
+
+class Foo {
+  bar() { }
+  bar() { }
+}
+
+const u = 1;
+u = 2;
