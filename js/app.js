@@ -1,2 +1,2 @@
-function foo(){return!0}function blorg(){console.dir(1),console.log(2),console.log(1)}console.log("additional"),console.log("jowp");var o={set a(o){this.val=o}},fdhsdf;foo&&foo++,alert("sssss");var obj={x:"foo"},key="x",value=eval("obj."+key);setTimeout("alert('Hi!');",100);var x=new Function("a","b","return a + b"),x={y:1};foo&&bar();var ttt=new array,foo={bar:"This is a bar.",baz:{qux:"This is a qux"},difficult:"to read"};foo||bar;
+
 //# sourceMappingURL=dev/app.js.map
