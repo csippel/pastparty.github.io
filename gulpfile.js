@@ -26,6 +26,11 @@ const reload       = browsersync.reload;
 const del          = require('del');
 
 
+/**
+ * @name `gulp styles`
+ * @description Creates stylesheet for production
+ * @return {stream}
+ */
 gulp.task('styles', () =>
     gulp.src('./_src/sass/**/*.scss')
         .pipe(sourcemaps.init())
@@ -45,6 +50,11 @@ gulp.task('styles', () =>
         .pipe(gulp.dest('./css'))
 );
 
+
+/**
+ * @name `gulp serve`
+ * @description Creates a watcher and syncs browser
+ */
 gulp.task('serve', ['styles'], () => {
     browsersync.init({
         server: "./"
@@ -55,10 +65,17 @@ gulp.task('serve', ['styles'], () => {
 });
 
 
+/**
+ * @name `gulp scripts`
+ * @description Creates script files for production
+ * @return {stream}
+ */
 gulp.task('scripts', () =>
     gulp.src('./_src/js/**/*.js')
         .pipe(sourcemaps.init())
-        .pipe(babel())
+        .pipe(babel({
+            // presets: ['@babel/env'] <-- does not work >.< 
+        }))
         .pipe(eslint({
             rules: {
                 // no console.log statements
@@ -135,4 +152,69 @@ gulp.task('scripts', () =>
         .pipe(gulp.dest('./js'))
 );
 
-gulp.task('default', ['styles']);
+
+/**
+ * @name `gulp images`
+ * @description Optimize images
+ * @return {stream}
+ */
+gulp.task('images', () =>
+    gulp.src('._src/img/**/*.+(gif|jpg|jpeg|png|svg)')
+        .pipe(cache(imagemin([
+                imagemin.gifsicle({
+                    interlaced: true
+                }),
+                imagemin.jpegtran({
+                    progressive: true,
+                    arithmetic: true
+                }),
+                imagemin.optipng({
+                    optimizationLevel: 7
+                }),
+                imagemin.svgo({
+                    plugins: [{removeViewBox: true}]
+                })
+            ],
+            {
+                verbose: true
+            }
+        )))
+        .pipe(gulp.dest('./images'))
+);
+
+
+
+// --- dev helping tasks ---
+
+/**
+ * @name `gulp clear-cache`
+ * @description Removes cached items from gulp-cache
+ */
+gulp.task('clear-cache', () => cache.clearAll());
+
+/**
+ * @name `gulp clean`
+ * @description Removes all files from /css, /js, /images
+ */
+gulp.task('clean', () => del(['./css/*', './js/*', './images/*']));
+
+/**
+ * @name `gulp clean:dry`
+ * @description Indicates which files `gulp clean` would remove
+ */
+gulp.task('clean:dry', () => del(['./css/*', './js/*', './images/*'],
+    {
+        dryRun: true
+    })
+    .then(
+        paths => console.log('Would delete these:\n', paths.join('\n'))
+    )
+);
+
+
+
+/**
+ * @name `gulp`, `gulp default`
+ * @description Standard action
+ */
+gulp.task('default', ['styles', 'scripts']);
