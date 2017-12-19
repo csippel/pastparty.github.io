@@ -2,3 +2,14 @@
 /// Mixins for everyday use.
 ///
 ////
+
+///
+/// @name shadow
+/// @description Cast some shadows depending on given level. maybe colorfull.
+///
+/// @params level {number} [3] the higher the more shadow amount
+/// @params color {color value}  [rgba(0,0,0)] shadow color
+///
+@mixin shadow($level: 3, $color: rgb(0,0,0)) {
+    box-shadow: 0 35px (50px * 1.#{$level}) rgba(rgb($color), .2);
+}

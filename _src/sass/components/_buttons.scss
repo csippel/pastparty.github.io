@@ -1,5 +1,11 @@
 button {
+    display: inline-block;
+    outline: none;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    padding: $xs-size $s-size;
+    border-radius: 3px;
 
     &:disabled {
         cursor: default;
