@@ -8,8 +8,13 @@
 /// @description Cast some shadows depending on given level. maybe colorfull.
 ///
 /// @params level {number} [3] the higher the more shadow amount
-/// @params color {color value}  [rgba(0,0,0)] shadow color
+/// @params color {color value} [rgba(0,0,0)] shadow color
+/// @params inset {bool} [false] option for setting some inset shadow
 ///
-@mixin shadow($level: 3, $color: rgb(0,0,0)) {
-    box-shadow: 0 35px (50px * 1.#{$level}) rgba(rgb($color), .2);
+@mixin shadow($level: 3, $color: rgb(0,0,0), $inset: false) {
+    box-shadow: 0 35px (50px * (#{$level} * 0.1)) rgba($color, .2);
+
+    @if $inset == true {
+        box-shadow: inset 0 35px (50px * #{$level}) rgba($color, .2);
+    }
 }

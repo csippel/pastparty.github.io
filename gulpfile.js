@@ -74,7 +74,7 @@ gulp.task('scripts', () =>
     gulp.src('./_src/js/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(babel({
-            // presets: ['@babel/env'] <-- does not work >.< 
+            // presets: ['@babel/env'] <-- does not work >.<
         }))
         .pipe(eslint({
             rules: {

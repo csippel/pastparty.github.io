@@ -3,6 +3,10 @@
 @import './base/settings';
 @import './base/base';
 
+/// utils
+@import './utils/functions';
+@import './utils/mixins';
+
 /// components
 @import './components/buttons';
 @import './components/hero';
@@ -12,7 +16,3 @@
 @import './layout/footer';
 @import './layout/grid';
 @import './layout/header';
-
-/// utils
-@import './utils/functions';
-@import './utils/mixins';

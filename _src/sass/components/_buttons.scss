@@ -6,6 +6,7 @@ button {
     text-decoration: none;
     padding: $xs-size $s-size;
     border-radius: 3px;
+    @include shadow();
 
     &:disabled {
         cursor: default;
