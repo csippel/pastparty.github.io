@@ -23,6 +23,15 @@ body {
     padding: 1.2rem;
 }
 
+p,
+figure,
+h1, h2,
+footer,
+.social * {
+    opacity: 0;
+    animation: reveal .4s ease-out forwards;
+}
+
 header {
     margin: 1.6rem 0 4rem;
 }
@@ -67,6 +76,9 @@ h2 {
 h1 + span {
     color: #aaa;
     white-space: nowrap;
+    opacity: 0;
+    animation: reveal .4s ease-in-out forwards;
+    animation-delay: .3s;
 }
 
 a {
@@ -128,7 +140,6 @@ li {
     display: block;
 }
 
-
 .more {
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -139,11 +150,11 @@ a:hover .more {
     opacity: 1;
 }
 
-
 ::selection {
     background-color: #5f4b8b;
     color: #fff;
 }
+
 ::-moz-selection {
     background-color: #5f4b8b;
     color: #fff;
@@ -194,6 +205,20 @@ footer {
     font-style: italic;
     line-height: 1.2;
     color: #666;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    70% {
+        transform: translateY(1px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (min-width: 45rem) {
