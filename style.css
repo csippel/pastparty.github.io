@@ -27,12 +27,33 @@ header {
     margin: 1.6rem 0 4rem;
 }
 
+figure {
+    display: block;
+}
+
 h1, h2 {
     font-size: 1em;
     font-weight: 500;
     display: inline-block;
     color: #333;
     padding-right: .8rem;
+}
+
+h1 a,
+footer a {
+    color: #333;
+    margin: initial;
+    padding: initial;
+}
+
+h1 a:hover,
+footer a:hover {
+    color: #5f4b8b;
+    background: none;
+    margin: initial;
+    padding: initial;
+    border-bottom: 2px solid #5f4b8b;
+    border-radius: initial;
 }
 
 h2 {
@@ -99,7 +120,7 @@ li {
 
 .currently-learning {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 4px 10px;
     background-color: rgba(0,0,0,.01);
     border-radius: 50em;
@@ -147,7 +168,8 @@ a:hover .more {
     display: block;
 }
 
-#about:target ~ .social {
+#about:target ~ .social,
+#about:target ~ footer {
     display: none;
 }
 
@@ -174,4 +196,12 @@ a:hover .more {
 .social a:hover {
     text-decoration: none;
     opacity: 1;
+}
+
+footer {
+    position: absolute;
+    bottom: 1em;
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
 }
