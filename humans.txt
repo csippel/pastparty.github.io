@@ -1,6 +1,6 @@
 /* TEAM */
     Name: Christoph Sippel
-    Contact: pastparty [at] protonmail.com
+    Contact: pastparty [attt] protonmail.com
     Twitter: TBA
     From: Berlin, Germany
 
@@ -8,7 +8,7 @@
     You
 
 /* SITE */
-    Last update: 2017-12-04
+    Last update: 2018-01-04
     Language: English / German
     Doctype: HTML5
-    Tools: Atom.io IDE, Chrome Dev Tools, Firefox Dev Tools, yarn, npm, git+github
+    Tools: atom.io IDE, Chrome Dev Tools, Firefox Dev Tools, git+github
