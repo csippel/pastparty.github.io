@@ -1,3 +1,30 @@
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Barlow Regular'), local('Barlow-Regular'),
+       url('./fonts/barlow-v1-latin-regular.woff2') format('woff2'),
+       url('./fonts/barlow-v1-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Barlow Italic'), local('Barlow-Italic'),
+       url('./fonts/barlow-v1-latin-italic.woff2') format('woff2'),
+       url('./fonts/barlow-v1-latin-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Barlow Medium'), local('Barlow-Medium'),
+       url('./fonts/barlow-v1-latin-500.woff2') format('woff2'),
+       url('./fonts/barlow-v1-latin-500.woff') format('woff');
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -88,6 +115,11 @@ a {
     padding: 2px 6px;
 }
 
+.social a {
+    vertical-align: -webkit-baseline-middle;
+    padding: 12px 6px 2px;
+}
+
 a:hover {
     color: #fff;
     background: #5f4b8b;
@@ -146,6 +178,7 @@ li {
     font-size: 1.2rem;
     opacity: .75;
 }
+
 a:hover .more {
     opacity: 1;
 }
@@ -175,6 +208,7 @@ a:hover .more {
 
 #about:target + .close {
     display: inline-block;
+    padding: 8px 6px 2px;
 }
 
 .close {
@@ -205,6 +239,12 @@ footer {
     font-style: italic;
     line-height: 1.2;
     color: #666;
+}
+
+.footer__tag-line {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
 }
 
 @keyframes reveal {
