@@ -8,7 +8,7 @@
     You
 
 /* SITE */
-    Last update: 2018-03-26
+    Last update: 2018-10-22
     Language: English / German
     Doctype: HTML5
-    Tools: atom.io IDE, Webstorm, Chrome Dev Tools, Firefox Dev Tools, git+github
+    Tools: atom.io IDE, Sublime Text 3, Webstorm, Chrome Dev Tools, Firefox Dev Tools, git+github
